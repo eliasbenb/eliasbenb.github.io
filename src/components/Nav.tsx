@@ -88,7 +88,7 @@ const Nav = () => {
           <LandingButton name='Contact' link='/contact' selected={router.pathname === '/contact'} />
           <a
             target='_blank'
-            href='/resume'
+            href='/assets/resume.pdf'
             className='bg-transparent hover:bg-gray-700/5 dark:hover:bg-[#c8c8dc]/5 dark:text-white cursor-pointer px-4 py-2 text-sm rounded-md text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-75'
           >
             Resume
@@ -98,14 +98,14 @@ const Nav = () => {
         <div className='flex flex-row items-center justify-center gap-2 xs:gap-4'>
           <LinkButton
             title='GitHub'
-            href='/github'
+            href='https://github.com/eliasbenb'
             icon={
               <SiGithub className='w-6 h-6 cursor-pointer hover:fill-black dark:hover:fill-white fill-gray-600 dark:fill-gray-400 transition-colors' />
             }
           />
           <LinkButton
             title='LinkedIn'
-            href='/linkedin'
+            href='https://linkedin.com/in/eliasbenb'
             icon={
               <SiLinkedin className='w-6 h-6 cursor-pointer hover:fill-black dark:hover:fill-white fill-gray-600 dark:fill-gray-400 transition-colors' />
             }
@@ -160,7 +160,7 @@ const Nav = () => {
                 />
                 <MobileLandingButton
                   name='Resume'
-                  link='/resume'
+                  link='/assets/resume.pdf'
                   selected={false}
                   onClick={() => setMenuOpen(false)}
                 />
@@ -168,18 +168,18 @@ const Nav = () => {
 
               <div className='flex flex-row items-center justify-center gap-6 py-4'>
                 <LinkButton
-                  href={'/github'}
+                  href={'https://github.com/eliasbenb'}
                   icon={<SiGithub className='w-6 h-6 cursor-pointer' />}
                 />
                 <LinkButton
-                  href={'/twitter'}
+                  href={'https://twitter.com/eliasbenb'}
                   icon={<SiTwitter className='w-6 h-6 cursor-pointer' />}
                 />
                 <LinkButton
-                  href={'/linkedin'}
+                  href={'https://linkedin.com/in/eliasbenb'}
                   icon={<SiLinkedin className='w-6 h-6 cursor-pointer' />}
                 />
-                <LinkButton href={'/mail'} icon={<FiMail className='w-6 h-6 cursor-pointer' />} />
+                <LinkButton href={'mailto:me@elias.eu.org'} icon={<FiMail className='w-6 h-6 cursor-pointer' />} />
               </div>
             </motion.div>
           </>

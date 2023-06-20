@@ -109,7 +109,7 @@ const Index = ({ stats, repos }: AppProps) => {
       <p className='text-gray-800 dark:text-gray-300 leading-6 font-light tracking-wide mb-6'>
         Check me out on{' '}
         <a
-          href='https://github.com/eliasbenb'
+          href='https:/https://github.com/eliasbenb.com/eliasbenb'
           rel='noreferrer'
           className='font-semibold text-blue-500 hover:underline'
         >

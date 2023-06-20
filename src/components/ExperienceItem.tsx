@@ -8,7 +8,7 @@ interface ExperienceProps {
 
 const ExperienceItem = ({ title, company, start, end, description }: ExperienceProps) => {
   return (
-    <a href='/resume' rel='noreferrer' target='_blank'>
+    <a href='/assets/resume.pdf' rel='noreferrer' target='_blank'>
       <div className='flex flex-col h-42 md:h-36 p-4 bg-white/10 dark:bg-black/10 rounded-md border border-slate-400 hover:border-slate-700 dark:border-slate-800 dark:hover:border-slate-600 transition-colors duration-75 cursor-pointer'>
         <div className='flex flex-col md:flex-row justify-between md:items-center mb-1'>
           <div>

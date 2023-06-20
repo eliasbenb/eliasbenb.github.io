@@ -34,25 +34,25 @@ const Talk = ({ WEBHOOK_URL }: TalkProps) => {
           <ContactLink
             name='@eliasbenb'
             icon={<SiDiscord className='w-6 h-6 text-[#5865F2]' />}
-            link='/discord'
+            link='https://discord.com/users/641234002023415808'
             borderColor='hover:border-[#5865F2]/50'
           />
           <ContactLink
             name='@eliasbenb'
             icon={<SiLinkedin className='w-6 h-6 text-[#0A66C2]' />}
-            link='/linkedin'
+            link='https://linkedin.com/in/eliasbenb'
             borderColor='hover:border-[#1DA1F2]/50'
           />
           <ContactLink
             name='@eliasbenb'
             icon={<SiTwitter className='w-6 h-6 text-[#1DA1F2]' />}
-            link='/twitter'
+            link='https://twitter.com/eliasbenb'
             borderColor='hover:border-[#1DA1F2]/50'
           />
           <ContactLink
             name='me@elias.eu.org'
             icon={<FiMail className='w-6 h-6 text-gray-400' />}
-            link='/mail'
+            link='mailto:me@elias.eu.org'
             borderColor='hover:border-gray-400/50'
           />
         </div>
