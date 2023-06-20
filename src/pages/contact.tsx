@@ -6,7 +6,11 @@ import React from 'react';
 import { FiMail } from 'react-icons/fi';
 import { SiDiscord, SiLinkedin, SiTwitter } from 'react-icons/si';
 
-const Talk = () => {
+interface TalkProps {
+  WEBHOOK_URL: string;
+}
+
+const Talk = ({ WEBHOOK_URL }: TalkProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -24,7 +28,7 @@ const Talk = () => {
       <TimeStatus />
 
       <div className='grid grid-cols-1 md:grid-cols-3 md:gap-4 mb-20'>
-        <MessageComponent />
+        <MessageComponent WEBHOOK_URL={WEBHOOK_URL} />
 
         <div className='row-start-1 md:row-auto'>
           <ContactLink
@@ -56,5 +60,13 @@ const Talk = () => {
     </motion.div>
   );
 };
+
+export async function getStaticProps() {
+  const WEBHOOK_URL = process.env.WEBHOOK_URL;
+  return {
+    props: { WEBHOOK_URL },
+    revalidate: 3600,
+  };
+}
 
 export default Talk;

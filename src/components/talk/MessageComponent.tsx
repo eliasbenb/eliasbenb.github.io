@@ -4,7 +4,11 @@ import { useRef, useState } from 'react';
 import { ImSpinner2 } from 'react-icons/im';
 import { RiSendPlane2Fill } from 'react-icons/ri';
 
-const MessageComponent = () => {
+interface MessageComponentProps {
+  WEBHOOK_URL: string;
+}
+
+const MessageComponent = ({ WEBHOOK_URL }: MessageComponentProps) => {
   const email = useRef<string>('');
   const message = useRef<string>('');
   const [sending, setSending] = useState<boolean>(false);
@@ -22,15 +26,30 @@ const MessageComponent = () => {
 
     setSending(true);
 
-    let response = await axios.post('/api/send', {
-      email: email.current,
-      message: message.current,
-    });
+    const data = { email: email.current, message: message.current };
+    if (!data) return setErrMsg('Nice try :)');
+    if (data.message.length < 1 || data.email.length < 1)
+      return setErrMsg('Please fill out all fields!');
+    if (data.message.length > 1000) return setErrMsg('Message is too long!');
+    if (data.email.length > 500) return setErrMsg('Email is too long!');
 
-    if (response.data.result === 'FIELD_EMPTY') return setErrMsg('Please fill out all fields!');
-    if (response.data.result === 'DISCORD_API_ERROR') return setErrMsg('Something went wrong...');
-
-    setSending(false);
+    await axios
+      .post(WEBHOOK_URL, {
+        embeds: [
+          {
+            color: 3108090,
+            title: data.email,
+            author: {
+              name: window.navigator.userAgent ?? 'unknown!?',
+            },
+            description: data.message,
+          },
+        ],
+      })
+      .then((response) => {
+        if (response.data.err) return setErrMsg('Something went wrong...');
+        return setSending(false);
+      });
 
     return setMessageSent(true);
   };
