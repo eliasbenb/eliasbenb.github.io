@@ -44,3 +44,37 @@ a {
 .tippy-tooltip-content {
   color: #000;
 }
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

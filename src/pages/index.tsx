@@ -54,7 +54,10 @@ const Index = ({ stats, repos }: AppProps) => {
       transition={{ ease: 'easeOut', duration: 0.15 }}
       className='mt-24 w-full mb-32'
     >
-      <h1 className='mt-36 font-bold text-4xl md:text-5xl mb-4'>Hey, I'm Elias 👋</h1>
+      <div className='flex mt-36 mb-4'>
+        <h1 className='font-bold text-4xl md:text-5xl mr-2'>Hey, I'm Elias</h1>
+        <h1 className='text-4xl md:text-5xl wave'>👋</h1>
+      </div>
       <p className='text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12'>
         Passionate developer and student; refactoring and automation obsessor; Flask + React +
         PostgreSQL stack advocate; Docker champion. Feel free to learn more about me 😉.
