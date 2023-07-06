@@ -79,6 +79,21 @@ const Nav = () => {
     setMenuOpen((old) => !old);
   };
 
+  const onResumeClick = async () => {
+    const res = await fetch(
+      'https://gist.githubusercontent.com/eliasbenb/c25b8983be2ccfd132172eb2875c5ab2/raw/de1025ef3ed958b2b10e775632bf7ef7af6d0002/resume.pdf.b64',
+    );
+    const data = await res.text();
+    const a = document.createElement('a');
+    a.href = `data:application/pdf;base64,${data}`;
+    a.target = '_blank';
+    a.download = 'Elias_Benbourenane_Resume.pdf';
+    const win = window.open('', '_blank');
+    let html = `<html><body style="margin: 0 !important"><embed width="100%" height="100%" src="data:application/pdf;base64,${data}" type="application/pdf" /></body></html>`;
+    win?.document.write(html);
+    a.click();
+  };
+
   return (
     <>
       <motion.div className='hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md bg-white/60 dark:bg-[#12181d]/60 border border-slate-800/50 backdrop-blur-lg'>
@@ -87,8 +102,7 @@ const Nav = () => {
           <LandingButton name='Home' link='/' selected={router.pathname === '/'} />
           <LandingButton name='Contact' link='/contact' selected={router.pathname === '/contact'} />
           <a
-            target='_blank'
-            href='/assets/resume.pdf'
+            onClick={onResumeClick}
             className='bg-transparent hover:bg-gray-700/5 dark:hover:bg-[#c8c8dc]/5 dark:text-white cursor-pointer px-4 py-2 text-sm rounded-md text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-75'
           >
             Resume
@@ -119,7 +133,11 @@ const Nav = () => {
         </div>
 
         <div className='flex flex-row items-center justify-center'>
-          <button onClick={toggleMenu} aria-label="toggle-menu" className='h-9 w-9 flex items-center justify-center'>
+          <button
+            onClick={toggleMenu}
+            aria-label='toggle-menu'
+            className='h-9 w-9 flex items-center justify-center'
+          >
             {!mobileMenuOpen ? <HiMenu className='w-7 h-7' /> : <HiX className='w-7 h-7' />}
           </button>
         </div>
@@ -160,9 +178,12 @@ const Nav = () => {
                 />
                 <MobileLandingButton
                   name='Resume'
-                  link='/assets/resume.pdf'
+                  link='#'
                   selected={false}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => {
+                    setMenuOpen(false);
+                    onResumeClick();
+                  }}
                 />
               </div>
 
@@ -179,7 +200,10 @@ const Nav = () => {
                   href={'https://linkedin.com/in/eliasbenb'}
                   icon={<SiLinkedin className='w-6 h-6 cursor-pointer' />}
                 />
-                <LinkButton href={'mailto:me@elias.eu.org'} icon={<FiMail className='w-6 h-6 cursor-pointer' />} />
+                <LinkButton
+                  href={'mailto:me@elias.eu.org'}
+                  icon={<FiMail className='w-6 h-6 cursor-pointer' />}
+                />
               </div>
             </motion.div>
           </>

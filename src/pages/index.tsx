@@ -5,6 +5,7 @@ import { experience } from '../data/experience';
 import { motion } from 'framer-motion';
 import {
   SiAmazonaws,
+  SiAzurepipelines,
   SiCss3,
   SiDjango,
   SiDocker,
@@ -19,6 +20,7 @@ import {
   SiHtml5,
   SiJava,
   SiJavascript,
+  SiJest,
   SiJupyter,
   SiKotlin,
   SiMongodb,
@@ -70,7 +72,6 @@ const Index = ({ stats, repos }: AppProps) => {
         <TechItem icon={SiGo} name='Go' />
         <TechItem icon={SiJavascript} name='JavaScript' />
         <TechItem icon={SiTypescript} name='TypeScript' />
-        <TechItem icon={SiTailwindcss} name='TailwindCSS' />
         <TechItem icon={SiHtml5} name='HTML' />
         <TechItem icon={SiCss3} name='CSS' />
         <TechItem icon={SiGodotengine} name='Godot' />
@@ -78,12 +79,12 @@ const Index = ({ stats, repos }: AppProps) => {
         <TechItem icon={SiPowershell} name='PowerShell' />
         <TechItem icon={SiKotlin} name='Kotlin' />
         <TechItem icon={SiReact} name='React.js' />
+        <TechItem icon={SiVuedotjs} name='Vue.js' />
         <TechItem icon={SiVite} name='Vite.js' />
         <TechItem icon={SiNextdotjs} name='Next.js' />
-        <TechItem icon={SiVuedotjs} name='Vue.js' />
         <TechItem icon={SiExpress} name='Express.js' />
         <TechItem icon={SiNodedotjs} name='Node.js' />
-        <TechItem icon={SiElectron} name='Electron.js' />
+        <TechItem icon={SiTailwindcss} name='TailwindCSS' />
         <TechItem icon={SiDjango} name='Django' />
         <TechItem icon={SiFlask} name='Flask' />
         <TechItem icon={SiFastapi} name='FastAPI' />
@@ -91,14 +92,15 @@ const Index = ({ stats, repos }: AppProps) => {
         <TechItem icon={SiPostgresql} name='PostgreSQL' />
         <TechItem icon={SiTimescale} name='TimescaleDB' />
         <TechItem icon={SiSqlite} name='SQLite' />
-        <TechItem icon={SiOracle} name='Oracle' />
-        <TechItem icon={SiMysql} name='MySQL' />
+        <TechItem icon={SiOracle} name='Oracle SQL' />
         <TechItem icon={SiMongodb} name='MongoDB' />
         <TechItem icon={SiPandas} name='Pandas' />
         <TechItem icon={SiJupyter} name='Jupyter' />
         <TechItem icon={SiDocker} name='Docker' />
         <TechItem icon={SiAmazonaws} name='AWS' />
         <TechItem icon={SiGithubactions} name='GitHub Actions' />
+        <TechItem icon={SiAzurepipelines} name='Azure Pipelines' />
+        <TechItem icon={SiJest} name='Jest.js' />
       </ul>
 
       <h2 className='font-medium text-3xl mb-4 mt-12'>Experience 💼</h2>
@@ -155,7 +157,9 @@ export async function getStaticProps() {
   let repos = [];
   for (const org of orgs) {
     const res = await fetch(`https://api.github.com/users/${org}/repos?type=owner&per_page=100`, {
-      headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` },
+      headers: {
+        Authorization: process.env.GITHUB_TOKEN ? `Bearer ${process.env.GITHUB_TOKEN}` : '',
+      },
     }).then((res) => res.json());
     for (const repo of res) {
       if (wanted.includes(repo.full_name)) {

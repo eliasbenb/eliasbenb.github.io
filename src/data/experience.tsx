@@ -1,26 +1,64 @@
 export const experience = [
   {
     title: 'Senior Research Programmer',
-    company: 'Pitt Biomedical Informatics',
-    start: new Date('2023-06-01'),
-    end: null,
-    description:
-      '● Writing and deploying configurable data visualization tools to graph large SQL databsases containing medical records.\n● Developing and training machine learning models on medical history data to detect and prevent kidney disease.\n● Restructuring and querying large, multi-nationally sourced SQL databases containing billions of rows of medical data.\n● Building on and improving existing SAS scripts which supply records to a medical database used by several large institutes',
+    company: 'PCORI',
+    link: 'https://www.pcori.org',
+    start: new Date('2023-05-01'),
+    end: undefined,
+    bullets: [
+      `Generated profile reports and statistical summaries of the PCORI PaTH network's medical data using SAS and SQL.`,
+      `Trained machine learning models on patient medical data to preemptively detect signs of certain types of kidney disease.`,
+      `Developed and deployed tools to visualize the PCORI network's multi-institutional, private medical data for use in research.`,
+    ],
+    skills: ['Python', 'JavaScript', 'PostgreSQL', 'Oracle SQL', 'SAS', 'TensorFlow'],
   },
   {
-    title: 'Full Stack Developer',
+    title: 'Software Engineering Consultant',
     company: 'CAASI',
+    link: 'https://www.412connect.org',
     start: new Date('2023-05-01'),
-    end: null,
-    description:
-      "● Rebuilt CAASI's 412Connect project from end-to-end with heavy involvement in Django programming for the backend, SQLite database modeling, website wireframing, story map planning, and page design with HTML/CSS.\n● Implemented user data tracking on the website and outfited it with an admin dashboard to query and visualize the data.\n● Developed CI/CD testing and product shipment workflows using GitHub Actions and Docker registries.",
+    end: undefined,
+    bullets: [
+      `Rebuilt CAASI's 412Connect project from end-to-end with heavy involvement in backend programming using Django, SQLite database modeling, website wireframing, story map planning, and frontend design using React.js and TailwindCSS.`,
+      `Implemented a versatile user tracking system outfitted with an admin dashboard to query and visualize the tracking data easily.`,
+      `Handled all DevOps with the development of CI/CD testing workflows and build pipelines through GitHub Actions.`,
+      `Was promoted to a consulting position where I provided guidance and direction for the project past my internship period.`,
+    ],
+    skills: [
+      'Python',
+      'TypeScript',
+      'React.js',
+      'Django',
+      'SQLite',
+      'Docker',
+      'Oracle Cloud',
+      'GitHub Actions',
+    ],
   },
   {
     title: 'Software Developer',
     company: 'Levy Lab',
+    link: 'https://www.levylab.org',
     start: new Date('2022-12-01'),
     end: new Date('2023-05-01'),
-    description:
-      "● Maintained a fork of the open-source database visualizer software Grafana, tailored to the lab's needs. This involved full-stack software development with Go and React.js, implementing new features, and building CI/CD pipelines using GitHub Actions and Docker to deploy them on an AWS EC2 instance.\n● Operated decade-old PostgreSQL and TimescaleDB databases which contained tens of millions of rows of data. I was heavily involved with scripting, querying, optimizing, and remodeling the lab's databases.\n● Managed web hosting for many of the lab's apps and static pages, which involved working with DNS records, SSL certificates, web hosting providers (Namecheap), and web servers (Nginx).",
+    bullets: [
+      `Maintained a fork of the open-source database visualizer _Grafana_ and tailored it to the lab's needs; this involved full-stack software development with Go and React.js to include new features such as TimescaleDB-tailored and optimized functions.`,
+      `Developed build pipelines using GitHub Actions to publish Docker images used during production on an AWS EC2 instance.`,
+      `Remodeled the lab's large, decade-old production TimescaleDB database tables to optimize SQL query speed and efficiency.`,
+      `Acted as a webmaster for the lab's many sites; this involved DNS management, SSL certificate installation, and web hosting.`,
+    ],
+    skills: ['Go', 'TypeScript', 'React.js', 'TimescaleDB', 'Docker', 'AWS', 'GitHub Actions'],
+  },
+  {
+    title: 'Help Desk Technician',
+    company: 'University of Pittsburgh',
+    link: 'https://www.technology.pitt.edu/about-us',
+    start: new Date('2022-10-01'),
+    end: new Date('2022-12-01'),
+    bullets: [
+      `Operated a help desk phone line, where I provided support for software, hardware, and non-technical issues.`,
+      `Documented all incoming calls, emails, and live chats with detailed solutions and troubleshooting steps taken to solve issues.`,
+    ],
+    skills: ['Salesforce', 'Avaya'],
   },
 ];
