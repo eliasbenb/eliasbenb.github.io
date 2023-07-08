@@ -1,4 +1,4 @@
-export const experience = [
+let experience = [
   {
     title: 'Senior Research Programmer',
     company: 'PCORI',
@@ -6,11 +6,20 @@ export const experience = [
     start: new Date('2023-05-01'),
     end: undefined,
     bullets: [
-      `Generated profile reports and statistical summaries of the PCORI PaTH network's medical data using SAS and SQL.`,
+      `Built scripts to generate profile reports and statistical summaries of the PCORI network's medical data using SAS and SQL.`,
       `Trained machine learning models on patient medical data to preemptively detect signs of certain types of kidney disease.`,
-      `Developed and deployed tools to visualize the PCORI network's multi-institutional, private medical data for use in research.`,
+      `Developed and deployed tools to query and visualize the PCORI network's medical data with React.js, FastAPI, and Plot.ly.`,
     ],
-    skills: ['Python', 'JavaScript', 'PostgreSQL', 'Oracle SQL', 'SAS', 'TensorFlow'],
+    skills: [
+      'Python',
+      'JavaScript',
+      'React.js',
+      'FastAPI',
+      'PostgreSQL',
+      'Oracle SQL',
+      'SAS',
+      'TensorFlow',
+    ],
   },
   {
     title: 'Software Engineering Consultant',
@@ -62,3 +71,16 @@ export const experience = [
     skills: ['Salesforce', 'Avaya'],
   },
 ];
+
+for (let i = 0; i < experience.length; i++) {
+  for (let j = 0; j < experience[i].bullets.length; j++) {
+    experience[i].bullets[j] = experience[i].bullets[j].replace(
+      /\*\*(.*?)\*\*/g,
+      '<strong>$1</strong>',
+    );
+    experience[i].bullets[j] = experience[i].bullets[j].replace(/\*(.*?)\*/g, '<em>$1</em>');
+    experience[i].bullets[j] = experience[i].bullets[j].replace(/_(.*?)_/g, '<em>$1</em>');
+  }
+}
+
+export { experience };

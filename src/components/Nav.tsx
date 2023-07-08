@@ -84,14 +84,11 @@ const Nav = () => {
       'https://gist.githubusercontent.com/eliasbenb/c25b8983be2ccfd132172eb2875c5ab2/raw/de1025ef3ed958b2b10e775632bf7ef7af6d0002/resume.pdf.b64',
     );
     const data = await res.text();
-    const a = document.createElement('a');
-    a.href = `data:application/pdf;base64,${data}`;
-    a.target = '_blank';
-    a.download = 'Elias_Benbourenane_Resume.pdf';
     const win = window.open('', '_blank');
-    let html = `<html><body style="margin: 0 !important"><embed width="100%" height="100%" src="data:application/pdf;base64,${data}" type="application/pdf" /></body></html>`;
-    win?.document.write(html);
-    a.click();
+    let html = `<html><head><link href="${window.location.protocol}//${window.location.host}/favicon.ico" rel="icon" type="image/x-icon"><title>Elias Benbourenane Resume</title></head><body style="margin: 0 !important"><embed width="100%" height="100%" src="data:application/pdf;base64,${data}" type="application/pdf"></body></html>`;
+    if (win) {
+      win.document.write(html);
+    }
   };
 
   return (

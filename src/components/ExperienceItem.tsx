@@ -32,7 +32,9 @@ const ExperienceItem = ({ title, company, link, start, end, bullets, skills }: E
           </p>
         </div>
         <p className='text-xs text-gray-800/70 dark:text-gray-100/70 whitespace-pre-wrap'>
-          {bullets.map((bullet) => `● ${bullet}\n`)}
+          {bullets.map((bullet, i) => (
+            <span key={i} dangerouslySetInnerHTML={{ __html: `● ${bullet}\n` }} />
+          ))}
           {'\n'}
           <span className='font-semibold'>Skills:</span> {skills.join(', ')}
         </p>
