@@ -81,7 +81,7 @@ const Nav = () => {
 
   const onResumeClick = async () => {
     const res = await fetch(
-      'https://gist.githubusercontent.com/eliasbenb/c25b8983be2ccfd132172eb2875c5ab2/raw/de1025ef3ed958b2b10e775632bf7ef7af6d0002/resume.pdf.b64',
+      'https://gist.githubusercontent.com/eliasbenb/c25b8983be2ccfd132172eb2875c5ab2/raw',
     );
     const data = await res.text();
     const win = window.open('', '_blank');
