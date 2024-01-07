@@ -2,9 +2,9 @@ let experience = [
   {
     title: 'Server Engineer',
     company: 'DBMI PITT',
-    link: 'https://dbmi.pitt.edu', // Add the link if available
-    start: new Date('2023-08-01'),
-    end: undefined, // Ongoing
+    link: 'https://dbmi.pitt.edu',
+    start: new Date('2023-05-01'),
+    end: undefined,
     bullets: [
       `Developed a service to query and visualize medical summary data of PCORnet, a national medical network serving tens of millions of patients, establishing its foundations with React.js and FastAPI.`,
       `Scripted SAS and SQL programs to analyze and generate statistical summaries of PCORnet's extensive patient data.`,
@@ -27,7 +27,7 @@ let experience = [
     title: 'Software Engineering Consultant',
     company: 'CAASI',
     link: 'https://www.412connect.org',
-    start: new Date('2023-07-01'),
+    start: new Date('2023-05-01'),
     end: new Date('2023-09-01'),
     bullets: [
       `Reengineered the 412Connect project, a service to educate and inform the public about local business, end-to-end, being responsible for backend, frontend, and database design using a Django, React.js, and SQLite stack.`,
