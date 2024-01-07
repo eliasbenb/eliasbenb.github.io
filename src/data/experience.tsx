@@ -32,7 +32,7 @@ let experience = [
     bullets: [
       `Reengineered the 412Connect project, a service to educate and inform the public about local business, end-to-end, being responsible for backend, frontend, and database design using a Django, React.js, and SQLite stack.`,
       `Designed a comprehensive user analytics system for 412Connect featuring a dashboard, charts, graphs, and a search function.`,
-      `Managed DevOps, including the creation of CI/CD test workflows and build pipelines using GitHub Actions and Jest.js.`,
+      `Managed DevOps, including creating CI/CD test workflows and build pipelines using GitHub Actions and Jest.js.`,
       `Promoted to a consulting role to provide guidance and strategic direction for the project beyond my internship tenure.`,
     ],
     skills: [
