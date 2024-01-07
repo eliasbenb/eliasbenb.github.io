@@ -1,37 +1,39 @@
 let experience = [
   {
-    title: 'Senior Research Programmer',
-    company: 'PCORI',
-    link: 'https://www.pcori.org',
-    start: new Date('2023-05-01'),
-    end: undefined,
+    title: 'Server Engineer',
+    company: 'DBMI PITT',
+    link: 'https://dbmi.pitt.edu', // Add the link if available
+    start: new Date('2023-08-01'),
+    end: undefined, // Ongoing
     bullets: [
-      `Built scripts to generate profile reports and statistical summaries of the PCORI network's medical data using SAS and SQL.`,
-      `Trained machine learning models on patient medical data to preemptively detect signs of certain types of kidney disease.`,
-      `Developed and deployed tools to query and visualize the PCORI network's medical data with React.js, FastAPI, and Plot.ly.`,
+      `Developed a service to query and visualize medical summary data of PCORnet, a national medical network serving tens of millions of patients, establishing its foundations with React.js and FastAPI.`,
+      `Scripted SAS and SQL programs to analyze and generate statistical summaries of PCORnet's extensive patient data.`,
+      `Deployed a high-performance Linux server for machine learning and AI in academic research, configured to host a modified JupyterHub instance, secure sensitive data, and enforce memory/CPU user quotas using Docker.`,
+      `Engineered an API for querying various self-hosted AI language models, optimizing for efficiency by integrating block-wise quantization and request queuing to manage the high GPU load that comes with hosting multiple large language models.`,
     ],
     skills: [
       'Python',
-      'JavaScript',
+      'TypeScript',
       'React.js',
       'FastAPI',
       'PostgreSQL',
-      'Oracle SQL',
-      'SAS',
-      'TensorFlow',
+      'SAS 9',
+      'Transformers',
+      'Jupyter',
+      'Docker',
     ],
   },
   {
     title: 'Software Engineering Consultant',
     company: 'CAASI',
     link: 'https://www.412connect.org',
-    start: new Date('2023-05-01'),
-    end: undefined,
+    start: new Date('2023-07-01'),
+    end: new Date('2023-09-01'),
     bullets: [
-      `Rebuilt CAASI's 412Connect project from end-to-end with heavy involvement in backend programming using Django, SQLite database modeling, website wireframing, story map planning, and frontend design using React.js and TailwindCSS.`,
-      `Implemented a versatile user tracking system outfitted with an admin dashboard to query and visualize the tracking data easily.`,
-      `Handled all DevOps with the development of CI/CD testing workflows and build pipelines through GitHub Actions.`,
-      `Was promoted to a consulting position where I provided guidance and direction for the project past my internship period.`,
+      `Reengineered the 412Connect project, a service to educate and inform the public about local business, end-to-end, being responsible for backend, frontend, and database design using a Django, React.js, and SQLite stack.`,
+      `Designed a comprehensive user analytics system for 412Connect featuring a dashboard, charts, graphs, and a search function.`,
+      `Managed DevOps, including the creation of CI/CD test workflows and build pipelines using GitHub Actions and Jest.js.`,
+      `Promoted to a consulting role to provide guidance and strategic direction for the project beyond my internship tenure.`,
     ],
     skills: [
       'Python',
@@ -42,6 +44,7 @@ let experience = [
       'Docker',
       'Oracle Cloud',
       'GitHub Actions',
+      'Jest.js',
     ],
   },
   {
@@ -51,33 +54,17 @@ let experience = [
     start: new Date('2022-12-01'),
     end: new Date('2023-05-01'),
     bullets: [
-      `Maintained a fork of the open-source database visualizer _Grafana_ and tailored it to the lab's needs; this involved full-stack software development with Go and React.js to include new features such as TimescaleDB-tailored and optimized functions.`,
-      `Developed build pipelines using GitHub Actions to publish Docker images used during production on an AWS EC2 instance.`,
-      `Remodeled the lab's large, decade-old production TimescaleDB database tables to optimize SQL query speed and efficiency.`,
-      `Acted as a webmaster for the lab's many sites; this involved DNS management, SSL certificate installation, and web hosting.`,
+      `Customized and maintained a fork of Grafana, the database visualization software, involving full-stack development with Go and React.js to integrate TimescaleDB tailored and optimized features.`,
+      `Wrote GitHub Actions pipelines to automate building and deployment of Docker images for AWS EC2 containers.`,
+      `Served as a webmaster, handling DNS management, SSL certificate installation, and web hosting for the lab's websites.`,
     ],
     skills: ['Go', 'TypeScript', 'React.js', 'TimescaleDB', 'Docker', 'AWS', 'GitHub Actions'],
-  },
-  {
-    title: 'Help Desk Technician',
-    company: 'University of Pittsburgh',
-    link: 'https://www.technology.pitt.edu/about-us',
-    start: new Date('2022-10-01'),
-    end: new Date('2022-12-01'),
-    bullets: [
-      `Operated a help desk phone line, where I provided support for software, hardware, and non-technical issues.`,
-      `Documented all incoming calls, emails, and live chats with detailed solutions and troubleshooting steps taken to solve issues.`,
-    ],
-    skills: ['Salesforce', 'Avaya'],
   },
 ];
 
 for (let i = 0; i < experience.length; i++) {
   for (let j = 0; j < experience[i].bullets.length; j++) {
-    experience[i].bullets[j] = experience[i].bullets[j].replace(
-      /\*\*(.*?)\*\*/g,
-      '<strong>$1</strong>',
-    );
+    experience[i].bullets[j] = experience[i].bullets[j].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     experience[i].bullets[j] = experience[i].bullets[j].replace(/\*(.*?)\*/g, '<em>$1</em>');
     experience[i].bullets[j] = experience[i].bullets[j].replace(/_(.*?)_/g, '<em>$1</em>');
   }
