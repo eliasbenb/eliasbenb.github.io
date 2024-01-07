@@ -60,6 +60,18 @@ let experience = [
     ],
     skills: ['Go', 'TypeScript', 'React.js', 'TimescaleDB', 'Docker', 'AWS', 'GitHub Actions'],
   },
+  {
+    title: 'Help Desk Technician',
+    company: 'University of Pittsburgh',
+    link: 'https://www.technology.pitt.edu/about-us',
+    start: new Date('2022-10-01'),
+    end: new Date('2022-12-01'),
+    bullets: [
+      `Operated a help desk phone line, where I provided support for software, hardware, and non-technical issues.`,
+      `Documented all incoming calls, emails, and live chats with detailed solutions and troubleshooting steps taken to solve issues.`,
+    ],
+    skills: ['Salesforce', 'Avaya'],
+  },
 ];
 
 for (let i = 0; i < experience.length; i++) {
