@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useLanyard } from 'use-lanyard';
+const { useLanyard } = require('use-lanyard');
 
 const parseImgUrl = (url: string = '', appId: number = 0) => {
   if (url.startsWith(`mp:external`)) {
@@ -16,6 +16,7 @@ const Activity = () => {
     return null;
   }
 
+  // @ts-ignore
   const code = user.activities.find((activity) => activity.name === 'Code');
   const spotify = user.spotify;
 
