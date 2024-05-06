@@ -36,6 +36,7 @@ const Activity = () => {
 
       <div className='w-full h-[6rem] flex flex-row items-center justify-start'>
         <img
+          // @ts-ignore
           src={parseImgUrl(code.assets?.large_image, code.application_id)}
           className='w-[4.5rem] h-[4.5rem] rounded-md mr-4 pointer-events-none'
           alt={code.assets?.large_text}
@@ -67,7 +68,7 @@ const Activity = () => {
 
       <div className='w-full h-[6rem] flex flex-row items-center justify-start'>
         <img
-          src={spotify.album_art_url}
+          src={spotify.album_art_url || ''}
           className='w-[4.5rem] h-[4.5rem] rounded-md mr-4 pointer-events-none'
           alt={spotify.album}
         />
