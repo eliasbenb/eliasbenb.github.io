@@ -1,39 +1,41 @@
 let experience = [
   {
-    title: 'Server Engineer',
+    title: 'Software Engineer',
     company: 'DBMI PITT',
     link: 'https://dbmi.pitt.edu',
     start: new Date('2023-05-01'),
     end: undefined,
     bullets: [
-      `Developed a service to query and visualize medical summary data of PCORnet, a national medical network serving tens of millions of patients, establishing its foundations with React.js and FastAPI.`,
-      `Scripted SAS and SQL programs to analyze and generate statistical summaries of PCORnet's extensive patient data.`,
-      `Deployed a high-performance Linux server for machine learning and AI in academic research, configured to host a modified JupyterHub instance, secure sensitive data, and enforce memory/CPU user quotas using Docker.`,
-      `Engineered an API for querying various self-hosted AI language models, optimizing for efficiency by integrating block-wise quantization and request queuing to manage the high GPU load that comes with hosting multiple large language models.`,
+      `Scripted **SAS** and **SQL** programs that generate statistical summaries of patient electronic health records in the _PCORnet_ database, a national medical network of **hundreds** of hospitals and over **30 million** patients yearly.`,
+      `Designed a service for PCORnet patients to query or chart drug, condition, and demographic data with **React.js** and **FastAPI**.`,
+      `Deployed a high-performance **Linux** server for research on large medical datasets packaged with locked-down **Jupyter** and **RStudio** environments in user-isolated and GPU-enabled **Docker** containers.`,
+      `Desgned a dashboard with **React.js** for care coordinators to predict possible prescription errors during cross-center patient transitions with **machine learning**`,
+      `Developed a **REST API** for querying various self-hosted **AI** language models optimized with block-wise quantization and request queuing to manage high GPU loads in a shared environment.`,
     ],
     skills: [
       'Python',
       'TypeScript',
+      'R',
       'React.js',
       'FastAPI',
-      'PostgreSQL',
-      'SAS 9',
-      'Transformers',
+      'SAS',
+      'SQL',
+      'PyTorch',
       'Jupyter',
       'Docker',
     ],
   },
   {
-    title: 'Software Engineering Consultant',
+    title: 'Software Engineering Consultant ← Full Stack Developer Intern',
     company: 'CAASI',
-    link: 'https://www.412connect.org',
+    link: 'https://www.caasi.pitt.edu',
     start: new Date('2023-05-01'),
     end: new Date('2023-09-01'),
     bullets: [
-      `Reengineered the 412Connect project, a service to educate and inform the public about local business, end-to-end, being responsible for backend, frontend, and database design using a Django, React.js, and SQLite stack.`,
-      `Designed a comprehensive user analytics system for 412Connect featuring a dashboard, charts, graphs, and a search function.`,
-      `Managed DevOps, including creating CI/CD test workflows and build pipelines using GitHub Actions and Jest.js.`,
-      `Promoted to a consulting role to provide guidance and strategic direction for the project beyond my internship tenure.`,
+      `Migrated the _412Connect_ project, a service to educate and inform the public about local businesses, to an entirely new stack and was responsible for backend, frontend, and database design in a **Django**, **React.js**, and **SQLite** stack.`,
+      `Developed a **user analytics** and tracking system for _412Connect_ featuring a dashboard, charts, graphs, and search/filtering.`,
+      `Introduced new DevOps pipelines, including CI/CD building, testing, and deployment to **AWS** using **GitHub Actions**.`,
+      `Was promoted to a **consulting** role to provide guidance and strategic direction for the project beyond my internship tenure.`,
     ],
     skills: [
       'Python',
@@ -42,7 +44,7 @@ let experience = [
       'Django',
       'SQLite',
       'Docker',
-      'Oracle Cloud',
+      'AWS',
       'GitHub Actions',
       'Jest.js',
     ],
@@ -54,8 +56,9 @@ let experience = [
     start: new Date('2022-12-01'),
     end: new Date('2023-05-01'),
     bullets: [
-      `Customized and maintained a fork of Grafana, the database visualization software, involving full-stack development with Go and React.js to integrate TimescaleDB tailored and optimized features.`,
-      `Wrote GitHub Actions pipelines to automate building and deployment of Docker images for AWS EC2 containers.`,
+      `Refactored **SQL** tables containing billions of rows in a **TimescaleDB** database to optimize indexing.`,
+      `Maintained _Grafana_ fork, which involved full-stack development with **Go** and **React.js** to integrate features for **TimescaleDB**.`,
+      `Wrote **GitHub Actions** pipelines to automate building and deployment of Docker images for **AWS** EC2 containers.`,
       `Served as a webmaster, handling DNS management, SSL certificate installation, and web hosting for the lab's websites.`,
     ],
     skills: ['Go', 'TypeScript', 'React.js', 'TimescaleDB', 'Docker', 'AWS', 'GitHub Actions'],
@@ -76,7 +79,10 @@ let experience = [
 
 for (let i = 0; i < experience.length; i++) {
   for (let j = 0; j < experience[i].bullets.length; j++) {
-    experience[i].bullets[j] = experience[i].bullets[j].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    experience[i].bullets[j] = experience[i].bullets[j].replace(
+      /\*\*(.*?)\*\*/g,
+      '<strong>$1</strong>',
+    );
     experience[i].bullets[j] = experience[i].bullets[j].replace(/\*(.*?)\*/g, '<em>$1</em>');
     experience[i].bullets[j] = experience[i].bullets[j].replace(/_(.*?)_/g, '<em>$1</em>');
   }

@@ -12,20 +12,28 @@ import {
   SiExpress,
   SiFastapi,
   SiFlask,
+  SiR,
+  SiC,
+  SiRust,
   SiGithubactions,
   SiGnubash,
   SiGo,
+  SiSvelte,
+  SiTensorflow,
+  SiPytorch,
   SiGodotengine,
   SiHtml5,
-  SiJava,
+  SiOracle,
   SiJavascript,
   SiJest,
   SiJupyter,
-  SiKotlin,
+  SiNumpy,
+  SiJunit5,
+  SiRstudio,
+  SiTauri,
   SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
-  SiOracle,
   SiPandas,
   SiPostgresql,
   SiPowershell,
@@ -33,12 +41,12 @@ import {
   SiQt,
   SiReact,
   SiSqlite,
-  SiTailwindcss,
   SiTimescale,
   SiTypescript,
   SiVite,
   SiVuedotjs,
 } from 'react-icons/si';
+import { FaJava } from "react-icons/fa6";
 
 interface AppProps {
   stats: Record<string, number>;
@@ -59,46 +67,55 @@ const Index = ({ stats, repos }: AppProps) => {
         <h1 className='text-4xl md:text-5xl wave'>👋</h1>
       </div>
       <p className='text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12'>
-        Passionate developer and student; refactoring and automation obsessor; Flask + React +
-        PostgreSQL stack advocate; Docker champion. Feel free to learn more about me 😉.
+        Passionate developer and student; React.js + FastAPI +
+        PostgreSQL stack advocate; Docker champion; Feel free to learn more about me 😉.
       </p>
 
       <h2 className='font-medium text-3xl mb-2'>Technologies 💻</h2>
-      <ul className='flex flex-row flex-wrap justify-center w-full p-2 border border-slate-800 rounded-md bg-white/10 dark:bg-black/10'>
+      <ul className='flex flex-row flex-wrap justify-center w-full p-2 gap-1.5 border border-slate-800 rounded-md bg-white/10 dark:bg-black/10'>
         <TechItem icon={SiPython} name='Python' />
-        <TechItem icon={SiJava} name='Java' />
+        <TechItem icon={FaJava} name='Java' />
         <TechItem icon={SiGo} name='Go' />
         <TechItem icon={SiJavascript} name='JavaScript' />
         <TechItem icon={SiTypescript} name='TypeScript' />
+        <TechItem icon={SiRust} name='Rust' />
+        <TechItem icon={SiR} name='R' />
+        <TechItem icon={SiC} name='C' />
+        <TechItem icon={SiGodotengine} name='Godot' />
         <TechItem icon={SiHtml5} name='HTML' />
         <TechItem icon={SiCss3} name='CSS' />
-        <TechItem icon={SiGodotengine} name='Godot' />
         <TechItem icon={SiGnubash} name='Bash' />
         <TechItem icon={SiPowershell} name='PowerShell' />
-        <TechItem icon={SiKotlin} name='Kotlin' />
-        <TechItem icon={SiReact} name='React.js' />
-        <TechItem icon={SiVuedotjs} name='Vue.js' />
-        <TechItem icon={SiVite} name='Vite.js' />
-        <TechItem icon={SiNextdotjs} name='Next.js' />
-        <TechItem icon={SiExpress} name='Express.js' />
-        <TechItem icon={SiNodedotjs} name='Node.js' />
-        <TechItem icon={SiTailwindcss} name='TailwindCSS' />
         <TechItem icon={SiDjango} name='Django' />
         <TechItem icon={SiFlask} name='Flask' />
         <TechItem icon={SiFastapi} name='FastAPI' />
+        <TechItem icon={SiReact} name='React.js' />
+        <TechItem icon={SiVite} name='Vite.js' />
+        <TechItem icon={SiVuedotjs} name='Vue.js' />
+        <TechItem icon={SiNextdotjs} name='Next.js' />
+        <TechItem icon={SiSvelte} name='Svelte' />
+        <TechItem icon={SiExpress} name='Express.js' />
+        <TechItem icon={SiNodedotjs} name='Node.js' />
+        <TechItem icon={SiTauri} name='Tauri' />
         <TechItem icon={SiQt} name='Qt' />
         <TechItem icon={SiPostgresql} name='PostgreSQL' />
         <TechItem icon={SiTimescale} name='TimescaleDB' />
         <TechItem icon={SiSqlite} name='SQLite' />
         <TechItem icon={SiOracle} name='Oracle SQL' />
         <TechItem icon={SiMongodb} name='MongoDB' />
-        <TechItem icon={SiPandas} name='Pandas' />
+        <TechItem icon={SiPytorch} name='PyTorch' />
+        <TechItem icon={SiTensorflow} name='TensorFlow' />
         <TechItem icon={SiJupyter} name='Jupyter' />
-        <TechItem icon={SiDocker} name='Docker' />
+        <TechItem icon={SiRstudio} name='RStudio' />
+        <TechItem icon={SiPandas} name='Pandas' />
+        <TechItem icon={SiNumpy} name='NumPy' />
         <TechItem icon={SiAmazonaws} name='AWS' />
+        <TechItem icon={SiOracle} name='Oracle Cloud' />
         <TechItem icon={SiGithubactions} name='GitHub Actions' />
         <TechItem icon={SiAzurepipelines} name='Azure Pipelines' />
+        <TechItem icon={SiDocker} name='Docker' />
         <TechItem icon={SiJest} name='Jest.js' />
+        <TechItem icon={SiJunit5} name='JUnit' />
       </ul>
 
       <h2 className='font-medium text-3xl mb-4 mt-12'>Experience 💼</h2>

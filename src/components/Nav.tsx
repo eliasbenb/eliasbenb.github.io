@@ -99,8 +99,8 @@ const Nav = () => {
           <LandingButton name='Home' link='/' selected={router.pathname === '/'} />
           <LandingButton name='Contact' link='/contact' selected={router.pathname === '/contact'} />
           <a
-            onClick={onResumeClick}
             className='bg-transparent hover:bg-gray-700/5 dark:hover:bg-[#c8c8dc]/5 dark:text-white cursor-pointer px-4 py-2 text-sm rounded-md text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-75'
+            href='/docs/Elias_Benbourenane_Resume.pdf'
           >
             Resume
           </a>
