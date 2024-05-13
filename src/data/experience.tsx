@@ -15,7 +15,7 @@ let experience = [
     ],
   },
   {
-    title: 'Software Engineering Consultant ← Full Stack Developer Intern',
+    title: 'Full Stack Developer Intern',
     company: 'CAASI',
     link: 'https://www.caasi.pitt.edu',
     start: new Date('2023-05-01'),
