@@ -1,7 +1,7 @@
 let experience = [
   {
     title: 'Software Engineer',
-    company: 'DBMI PITT',
+    company: 'University of Pittsburgh, Department of Biomedical Informatics',
     link: 'https://dbmi.pitt.edu',
     start: new Date('2023-05-01'),
     end: undefined,
@@ -16,7 +16,7 @@ let experience = [
   },
   {
     title: 'Full Stack Developer Intern',
-    company: 'CAASI',
+    company: 'University of Pittsburgh, Center for Analytical Approaches to Social Innovation',
     link: 'https://www.caasi.pitt.edu',
     start: new Date('2023-05-01'),
     end: new Date('2023-09-01'),
@@ -29,7 +29,7 @@ let experience = [
   },
   {
     title: 'Software Developer',
-    company: 'Levy Lab',
+    company: 'University of Pittsburgh, Levy Lab',
     link: 'https://www.levylab.org',
     start: new Date('2022-12-01'),
     end: new Date('2023-05-01'),
