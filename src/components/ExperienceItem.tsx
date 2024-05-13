@@ -5,10 +5,9 @@ interface ExperienceProps {
   start: Date;
   end?: Date;
   bullets: string[];
-  skills: string[];
 }
 
-const ExperienceItem = ({ title, company, link, start, end, bullets, skills }: ExperienceProps) => {
+const ExperienceItem = ({ title, company, link, start, end, bullets }: ExperienceProps) => {
   return (
     <a href={link} rel='noreferrer' target='_blank'>
       <div className='flex flex-col h-fit p-4 bg-white/10 dark:bg-black/10 rounded-md border border-slate-400 hover:border-slate-700 dark:border-slate-800 dark:hover:border-slate-600 transition-colors duration-75 cursor-pointer'>
@@ -35,8 +34,6 @@ const ExperienceItem = ({ title, company, link, start, end, bullets, skills }: E
           {bullets.map((bullet, i) => (
             <span key={i} dangerouslySetInnerHTML={{ __html: `● ${bullet}\n` }} />
           ))}
-          {'\n'}
-          <span className='font-semibold'>Skills:</span> {skills.join(', ')}
         </p>
       </div>
     </a>
