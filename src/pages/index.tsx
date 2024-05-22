@@ -3,50 +3,50 @@ import RepoItem from '../components/RepoItem';
 import { TechItem } from '../components/TechItem';
 import { experience } from '../data/experience';
 import { motion } from 'framer-motion';
+import { FaJava } from 'react-icons/fa6';
 import {
   SiAmazonaws,
   SiAzurepipelines,
+  SiC,
   SiCss3,
   SiDjango,
   SiDocker,
   SiExpress,
   SiFastapi,
   SiFlask,
-  SiR,
-  SiC,
-  SiRust,
   SiGithubactions,
   SiGnubash,
   SiGo,
-  SiSvelte,
-  SiTensorflow,
-  SiPytorch,
   SiGodotengine,
   SiHtml5,
-  SiOracle,
   SiJavascript,
   SiJest,
-  SiJupyter,
-  SiNumpy,
   SiJunit5,
-  SiRstudio,
-  SiTauri,
+  SiJupyter,
   SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
+  SiNumpy,
+  SiOracle,
   SiPandas,
   SiPostgresql,
   SiPowershell,
   SiPython,
+  SiPytorch,
   SiQt,
+  SiR,
   SiReact,
+  SiRstudio,
+  SiRust,
   SiSqlite,
+  SiSvelte,
+  SiTauri,
+  SiTensorflow,
   SiTimescale,
   SiTypescript,
   SiVite,
   SiVuedotjs,
 } from 'react-icons/si';
-import { FaJava } from "react-icons/fa6";
 
 interface AppProps {
   stats: Record<string, number>;
@@ -67,8 +67,8 @@ const Index = ({ stats, repos }: AppProps) => {
         <h1 className='text-4xl md:text-5xl wave'>👋</h1>
       </div>
       <p className='text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12'>
-        Passionate developer and student; React.js + FastAPI +
-        PostgreSQL stack advocate; Docker champion; Feel free to learn more about me 😉.
+        Passionate developer and student; React.js + FastAPI + PostgreSQL stack advocate; Docker
+        champion; Feel free to learn more about me 😉.
       </p>
 
       <h2 className='font-medium text-3xl mb-2'>Technologies 💻</h2>
@@ -129,7 +129,7 @@ const Index = ({ stats, repos }: AppProps) => {
       <p className='text-gray-800 dark:text-gray-300 leading-6 font-light tracking-wide mb-6'>
         Check me out on{' '}
         <a
-          href='https:/https://github.com/eliasbenb.com/eliasbenb'
+          href='https://github.com/eliasbenb'
           rel='noreferrer'
           className='font-semibold text-blue-500 hover:underline'
         >
