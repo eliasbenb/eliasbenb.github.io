@@ -22,7 +22,7 @@ let experience = [
     end: new Date('2023-09-01'),
     bullets: [
       `Migrated the _{412CONNECT}_ project to a new **Django**, **React.js**, and **SQLite** stack, handling backend, frontend, and database design.`,
-      `Developed an admin dashboard for analytics in _{412CONNECT}_, featuring powerful querying, chart/table graphics, and data exporting.`,
+      `Developed an analytics admin dashboard within _{412CONNECT}_, featuring powerful querying, chart/table graphics, and data exporting.`,
       `Introduced **CI/CD** pipelines with **GitHub Actions** for building, testing, and **AWS** deployment, saving **90+** minutes of daily dev time.`,
       `Was promoted to a consulting role to provide guidance and strategic direction for the project beyond my internship tenure.`,
     ],
@@ -37,18 +37,17 @@ let experience = [
       `Refactored **SQL** tables containing **billions** of rows, reducing the database's size by over **40%**, optimizing indexing performance.`,
       `Maintained a _Grafana_ fork to integrate features for **TimescaleDB** querying which involved development with **Go** and **React.js**.`,
       `Wrote **CI/CD** pipelines to eliminate **100%** of the daily build and deployment time with **AWS**, **Docker**, and **Github Actions**.`,
-      `Served as a webmaster, handling DNS management, SSL certificate installation, and web hosting for the lab's websites.`,
     ],
   },
   {
     title: 'Help Desk Technician',
     company: 'University of Pittsburgh',
-    link: 'https://www.technology.pitt.edu/about-us',
+    link: 'https://www.technology.pitt.edu',
     start: new Date('2022-10-01'),
     end: new Date('2022-12-01'),
     bullets: [
       `Operated a help desk phone line, providing support for software, hardware, and non-technical questions, averaging **20+** calls a day.`,
-      `Assisted callers with varying levels of tech-saviness and ages to reach solutions to both technical and non-technical issues.`,
+      `Assisted callers with varying levels of digital literacy and ages to reach solutions to both technical and non-technical issues.`,
     ],
   },
   {
