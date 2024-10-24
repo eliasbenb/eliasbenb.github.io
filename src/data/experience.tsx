@@ -1,7 +1,7 @@
 let experience = [
   {
     title: 'Software Engineer',
-    company: 'University of Pittsburgh, Department of Biomedical Informatics',
+    company: 'University of Pittsburgh Biomedical Informatics',
     link: 'https://dbmi.pitt.edu',
     start: new Date('2023-05-01'),
     end: undefined,
