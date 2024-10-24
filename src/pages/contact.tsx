@@ -50,9 +50,9 @@ const Talk = ({ WEBHOOK_URL }: TalkProps) => {
             borderColor='hover:border-[#1DA1F2]/50'
           />
           <ContactLink
-            name='me@elias.eu.org'
+            name='eliasbenb0@gmail.com'
             icon={<FiMail className='w-6 h-6 text-gray-400' />}
-            link='mailto:me@elias.eu.org'
+            link='mailto:eliasbenb0@gmail.com'
             borderColor='hover:border-gray-400/50'
           />
         </div>

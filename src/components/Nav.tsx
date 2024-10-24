@@ -198,7 +198,7 @@ const Nav = () => {
                   icon={<SiLinkedin className='w-6 h-6 cursor-pointer' />}
                 />
                 <LinkButton
-                  href={'mailto:me@elias.eu.org'}
+                  href={'mailto:eliasbenb0@gmail.com'}
                   icon={<FiMail className='w-6 h-6 cursor-pointer' />}
                 />
               </div>
