@@ -50,10 +50,9 @@ import {
 
 interface AppProps {
   stats: Record<string, number>;
-  repos: Record<any, any>;
 }
 
-const Index = ({ stats, repos }: AppProps) => {
+const Index = ({ stats }: AppProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -137,39 +136,16 @@ const Index = ({ stats, repos }: AppProps) => {
         </a>
         , where I contribute to various open-source projects. In total, I've earned{' '}
         <span className='font-bold text-black dark:text-slate-200'>{stats.stars}</span> stars and{' '}
-        <span className='font-bold text-black dark:text-slate-200'>{stats.forks}</span> forks. Feel
-        free to check out my heavy hitters:
+        <span className='font-bold text-black dark:text-slate-200'>{stats.forks}</span> forks.
       </p>
-      <div className='w-full grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 mb-12 gap-2'>
-        {repos.map((repo: Record<string, any>) => {
-          return (
-            <RepoItem
-              key={repo.name}
-              name={repo.name}
-              url={repo.html_url}
-              description={repo.description}
-              stars={repo.stargazers_count}
-              forks={repo.forks_count}
-              language={repo.language}
-            />
-          );
-        })}
-      </div>
     </motion.div>
   );
 };
 
 export async function getStaticProps() {
   const orgs = ['eliasbenb', 'DesterLib', 'libDrive'];
-  const wanted = [
-    'DesterLib/DesterLib',
-    'libDrive/libDrive',
-    'eliasbenb/plannitt',
-    'eliasbenb/MagnetMagnet',
-  ];
 
   let stats = { forks: 0, stars: 0 };
-  let repos = [];
   for (const org of orgs) {
     const res = await fetch(`https://api.github.com/users/${org}/repos?type=owner&per_page=100`, {
       headers: {
@@ -177,16 +153,13 @@ export async function getStaticProps() {
       },
     }).then((res) => res.json());
     for (const repo of res) {
-      if (wanted.includes(repo.full_name)) {
-        repos.push(repo);
-      }
       stats.forks += repo.forks_count;
       stats.stars += repo.stargazers_count;
     }
   }
 
   return {
-    props: { stats, repos },
+    props: { stats },
     revalidate: 3600,
   };
 }

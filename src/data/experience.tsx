@@ -1,17 +1,16 @@
 let experience = [
   {
     title: 'Software Engineer',
-    company: 'University of Pittsburgh',
+    company: 'University of Pittsburgh, Department of Biomedical Informatics',
     link: 'https://dbmi.pitt.edu',
     start: new Date('2023-05-01'),
     end: undefined,
     bullets: [
-      `Scripted **SAS** and **SQL** programs for the _{PCORNET}_ database to output annual statistical summaries on their **30,000,000+** patients.`,
-      `Engineered a tool for **5,000,000+** _{PCORNET}_ patients across **hundreds** of hospitals to better understand their conditions/medications.`,
-      `Desgined a service using **React.js** and **FastAPI** for _{UPMC}_ hospital to predict dangerous patient transitions with **machine learning**.`,
-      `Developed a **REST API** with **request queuing** to query various **locally-run language models** in lieu of a shared GPU environment.`,
-      `Deployed a **Linux** server for research on large medical data with **Dockerized** and user-isolated **Jupyter** and **RStudio** environments.`,
-      `Wrote **Bash** programs to automatically create and deploy custom **Docker** environments, eliminating over **90%** of manual build time.`,
+      `Designed a service for researchers and **13,000,000+** _PaTH_ network patients to assess drug-disease interactions and pharmacogenetics by leveraging _**SAS**_ for data consolidation and statistical analysis, _**FastAPI**_ for backend services, and _**React.js**_ for the user interface.`,
+      `Built an **AI-powered** web app using _**Next.js**_ to explore natural product-drug interactions through knowledge graphs and data tables.`,
+      `Prototyped a tool for _UPMC_ hospital to identify dangerous patient care transitions with **machine learning**, _**FastAPI**_, and _**React.js**_.`,
+      `Architected a locked-down, _HIPAA_-compliant _**Linux**_ server infrastructure for containerized compute sessions using _**Docker**_, scaled to **100+** users, with plans of cross-departmental adoption for its security and customization capabilities in research/academic settings.`,
+      `Implemented automation for environment customization and creation, reducing time spent on manual processes by **95%+** with _**Bash**_.`,
     ],
   },
   {
@@ -21,10 +20,10 @@ let experience = [
     start: new Date('2023-05-01'),
     end: new Date('2023-09-01'),
     bullets: [
-      `Migrated the _{412CONNECT}_ project to a new **Django**, **React.js**, and **SQLite** stack, handling backend, frontend, and database design.`,
-      `Developed an analytics admin dashboard within _{412CONNECT}_, featuring powerful querying, chart/table graphics, and data exporting.`,
-      `Introduced **CI/CD** pipelines with **GitHub Actions** for building, testing, and **AWS** deployment, saving **90+** minutes of daily dev time.`,
-      `Was promoted to a consulting role to provide guidance and strategic direction for the project beyond my internship tenure.`,
+      `Migrated _412Connect_ to a _**Django**_ and _**React.js**_ stack, leading full-stack development for improved scalability and performance. `,
+      `Built an analytics admin dashboard with _**Django**_ and _**Chart.js**_, enabling advanced data querying, visualization, and exporting.`,
+      `Established CI/CD pipelines using _**GitHub Actions**_, streamlining and automating build, test, and deployment processes.`,
+      `Promoted to a **consulting** role to advise on strategic direction, long-term goals, and tech stack optimization beyond my internship.`,
     ],
   },
   {
@@ -34,9 +33,9 @@ let experience = [
     start: new Date('2022-12-01'),
     end: new Date('2023-05-01'),
     bullets: [
-      `Refactored **SQL** tables containing **billions** of rows, reducing the database's size by over **40%**, optimizing indexing performance.`,
-      `Maintained a _Grafana_ fork to integrate features for **TimescaleDB** querying which involved development with **Go** and **React.js**.`,
-      `Wrote **CI/CD** pipelines to eliminate **100%** of the daily build and deployment time with **AWS**, **Docker**, and **Github Actions**.`,
+      `Refactored _**SQL**_ tables containing **billions** of rows, reducing database size by over **40%** and improving indexing performance.`,
+      `Enhanced a custom _Grafana_ fork by developing features in _**Go**_ and _**React.js**_ to support timeseries data querying and visualization.`,
+      `Developed CI/CD pipelines using _**AWS**_, _**Docker**_, and _**GitHub Actions**_, fully automating daily builds and deployments.`,
     ],
   },
   {
@@ -46,34 +45,11 @@ let experience = [
     start: new Date('2022-10-01'),
     end: new Date('2022-12-01'),
     bullets: [
-      `Operated a help desk phone line, providing support for software, hardware, and non-technical questions, averaging **20+** calls a day.`,
-      `Assisted callers with varying levels of digital literacy and ages to reach solutions to both technical and non-technical issues.`,
-    ],
-  },
-  {
-    title: 'Founding Engineer',
-    company: 'libDrive',
-    link: 'https://github.com/libDrive',
-    start: new Date('2020-11-01'),
-    end: new Date('2022-03-01'),
-    bullets: [
-      `Created a media library indexer and web interface using technologies such as **React.js**, **Flask**, **MongoDB**, and _Google Drive's_ API.`,
-      `Used concepts such as **threading**, **request queuing**, and **asynchrony** to serve high volume requests efficiently and performantly.`,
-      `Directed and coordinated the team efforts of _{LIBDRIVE}'s_ successor, _{DESTER}_, which was born from the open-source community's interest.`,
-      `Collaboratively contributed to _{DESTER}'s_ frontend development with **React.js** and the initial **backend migration** from **Python** to **Go**.`,
-      `Amassed over **100,000** downloads, **hundreds** of stars/forks on GitHub, a community of over **300** members, and **six** contributors.`,
+      `Operated a help desk phone line, providing support for software, hardware, and non-technical questions, averaging **15+** calls a day.`,
+      `Assisted callers of varying digital literacy to resolve technical and non-technical issues, achieving a satisfaction rating of **~100%**.`,
     ],
   },
 ];
-
-const DICTIONARY = {
-  '{PCORNET}': 'PCORnet',
-  '{UPMC}': 'UPMC',
-  '{412CONNECT}': '412Connect',
-  '{LIBDRIVE}': 'libDrive',
-  '{DESTER}': 'Dester',
-  '{NAHAR}': 'Nahar',
-};
 
 for (let i = 0; i < experience.length; i++) {
   for (let j = 0; j < experience[i].bullets.length; j++) {
@@ -83,13 +59,6 @@ for (let i = 0; i < experience.length; i++) {
     );
     experience[i].bullets[j] = experience[i].bullets[j].replace(/\*(.*?)\*/g, '<em>$1</em>');
     experience[i].bullets[j] = experience[i].bullets[j].replace(/_(.*?)_/g, '<em>$1</em>');
-
-    for (const key in DICTIONARY) {
-      experience[i].bullets[j] = experience[i].bullets[j].replace(
-        key,
-        DICTIONARY[key as keyof typeof DICTIONARY],
-      );
-    }
   }
 }
 

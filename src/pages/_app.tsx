@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
       <div className='text-black dark:text-white flex flex-row justify-center w-full h-full bg-gradient-to-bl from-white to-[#fff] dark:from-black dark:to-[#0d131f] min-h-screen'>
         <Nav />
-        <div className='w-[80%] md:w-[47rem]'>
+        <div className='w-[80%] md:w-[48rem]'>
           <AnimatePresence exitBeforeEnter>
             <Component {...pageProps} key={router.pathname} />
           </AnimatePresence>
