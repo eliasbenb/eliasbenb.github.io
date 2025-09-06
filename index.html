@@ -38,15 +38,27 @@
     <div class="container">
         <header class="fade-in">
             <h1>Elias Benbourenane</h1>
-            <p class="subtitle fade-in">Software Engineer, Pittsburgh</p>
+            <p class="subtitle fade-in">Software Engineer</p>
             <div class="contact fade-in">
                 <a href="mailto:eliasbenb0@gmail.com">eliasbenb0@gmail.com</a>
                 <a href="https://github.com/eliasbenb" target="_blank">gh/eliasbenb</a>
                 <a href="https://linkedin.com/in/eliasbenb" target="_blank">in/eliasbenb</a>
-                <a href="https://elias.eu.org" target="_blank">elias.eu.org</a>
-                <a href="/docs/Elias_Benbourenane_Resume.pdf" class="download-link" target="_blank">resume</a>
+                <a href="/docs/Elias_Benbourenane_resume.pdf" class="download-link" target="_blank">resume</a>
             </div>
         </header>
+
+        <section class="section" id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="section-content">
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Bachelor of Science in Computer Science</span>
+                        <span class="item-meta">Aug 2022—Apr 2026</span>
+                    </div>
+                    <p class="item-subtitle">University of Pittsburgh, Minor in Physics</p>
+                </div>
+            </div>
+        </section>
 
         <section class="section" id="experience">
             <h2 class="section-title">Experience</h2>
@@ -58,11 +70,13 @@
                     </div>
                     <p class="item-subtitle">University of Pittsburgh Biomedical Informatics</p>
                     <div class="item-content">
-                        <p>I develop tools for biomedical research using <span class="highlight">React, FastAPI, and Next.js</span>, including a comprehensive platform to explore drug-disease relationships across <span class="number">13M+</span> PaTH Network patient records. Recently built an LLM-powered application that parses biomedical knowledge graphs to generate visual and text summaries of drug mechanisms, and prototyped an ML tool for UPMC hospital to identify dangerous patient care transitions.</p>
+                        <p>I develop comprehensive tools for biomedical research using <span class="highlight">React, SAS, and FastAPI</span>, including a platform to explore drug-disease relationships across <span class="number">13M+</span> PaTH Network patient records. Recently built an <span class="highlight">LLM-powered Next.js application</span> with Prisma to visualize and summarize biomedical knowledge graphs of drug mechanisms, and prototyped an <span class="highlight">ML tool for UPMC hospital</span> to identify dangerous patient care transitions using FastAPI, SQLAlchemy, and React.</p>
                         
-                        <p>A major focus has been modernizing legacy systems and optimizing performance. I refactored a decade-old <span class="highlight">SQL</span> analytics codebase with modular design principles, achieving a <span class="number">~30x</span> runtime reduction. Additionally, I've scripted multi-node <span class="highlight">SLURM</span> pipelines for HPC data analysis that reduced quarterly workflow compute times by over <span class="number">90%</span>.</p>
+                        <p>A major focus has been modernizing legacy systems and optimizing performance. I modernized a <span class="highlight">SQL</span> analytics codebase with modular design and incremental processing, reducing runtime by <span class="number">9x</span> (38h → 4h). Additionally, I've orchestrated parallelized <span class="highlight">ETL pipelines</span> using SLURM and Amazon Redshift that reduced data processing time by over <span class="number">90%</span>.</p>
                         
-                        <p>On the infrastructure side, I architected and deployed a secure, <span class="highlight">HIPAA-compliant</span> Linux/Docker environment for AI compute workloads that now serves <span class="number">200+</span> users. I've managed over <span class="number">10</span> production servers across AWS and on-premises environments, often leading architecture decisions and serving as the primary developer across <span class="number">9+</span> concurrent projects.</p>
+                        <p>On the infrastructure side, I architected and deployed a secure, <span class="highlight">HIPAA-compliant</span> Linux and Docker environment for AI compute workloads that now serves <span class="number">200+</span> users. I've managed, architected, and deployed <span class="number">10+</span> production servers on-premises or in the cloud using AWS EC2/ECS/ALB, often leading architecture decisions and serving as the lead or sole developer across <span class="number">9+</span> concurrent projects.</p>
+                        
+                        <p>I also contributed with CMU to ship a <span class="highlight">PyTorch ML framework</span> for predictive temporal modeling through a Svelte web interface, and authored a monitoring framework in Bash with Slack alerting for several server groups critical to research infrastructure.</p>
                     </div>
                 </div>
 
@@ -73,9 +87,9 @@
                     </div>
                     <p class="item-subtitle">Center for Analytical Approaches to Social Innovation</p>
                     <div class="item-content">
-                        <p>During my internship, I led a comprehensive full-stack migration to a <span class="highlight">Django and React</span> architecture, introducing new features while significantly improving code maintainability. I also developed an analytics dashboard using Django and Chart.js that helps the organization analyze user engagement patterns and make data-driven outreach decisions.</p>
+                        <p>Promoted post-internship to a consulting role, advising on technical direction and key engineering decisions for multiple projects. I led a comprehensive full-stack migration to a <span class="highlight">Django and React</span> architecture, introducing new features while enabling faster development and significantly improving code maintainability.</p>
                         
-                        <p>Beyond development work, I implemented robust security measures including a user authentication and authorization system with <span class="highlight">OAuth 2.0</span> integration. I also established CI/CD pipelines using GitHub Actions that fully automated the build, test, and deployment processes on AWS. The quality of my work led to a promotion to a consulting role post-internship, where I continue to advise on technical direction and key engineering decisions across multiple projects.</p>
+                        <p>I developed an analytics dashboard using <span class="highlight">Django and Chart.js</span> to analyze user engagement patterns and inform data-driven outreach decisions. Beyond development work, I implemented robust security measures including a user authentication and authorization system with <span class="highlight">OAuth 2.0</span> integration, and established CI/CD pipelines using GitHub Actions that streamlined React builds, Jest tests, and deployment processes on AWS.</p>
                     </div>
                 </div>
 
@@ -88,7 +102,7 @@
                     <div class="item-content">
                         <p>I worked on high-performance systems for physics research, focusing on database optimization and custom tooling development. My primary achievement was refactoring <span class="highlight">SQL</span> tables containing billions of rows of sensor data, which reduced the overall database size by over <span class="number">40%</span> while significantly improving indexing performance for faster queries.</p>
                         
-                        <p>I also extended a custom Grafana fork with new <span class="highlight">Go and React</span> modules specifically designed for querying high-frequency physics time series data. To support the team's development workflow, I built comprehensive CI/CD pipelines using AWS, Docker, and GitHub Actions that fully automated daily builds and deployments. Additionally, I engineered automated Go-based SQL data validation pipelines that eliminated approximately <span class="number">6 hours</span> of manual physicist review work each week.</p>
+                        <p>I extended a custom Grafana fork with new <span class="highlight">Go and React</span> modules specifically designed for querying high-frequency physics time series data. To support the team's development workflow, I developed comprehensive CI/CD pipelines using AWS, Docker, and GitHub Actions that fully automated daily codebase builds and deployments. Additionally, I engineered automated Go-based SQL data validation pipelines that eliminated approximately <span class="number">6 hours</span> of manual physicist review work each week.</p>
                     </div>
                 </div>
 
@@ -115,9 +129,8 @@
                             <a href="https://github.com/eliasbenb/RARAR.py" class="ext-link"
                                 target="_blank">github.com</a>
                         </div>
-                        <p class="project-tech">Python, CLI</p>
-                        <p class="project-desc">First random-access RAR reader. Enables partial extraction, reducing
-                            bandwidth by <span class="number">99%+</span>. Adopted by Decypharr download client.</p>
+                        <p class="project-tech">Python, Go, CLI</p>
+                        <p class="project-desc">Open-sourced the first random-access RAR reader, enabling archive streaming with <span class="number">~99.98%</span> bandwidth savings. Implemented HTTP workflow support for efficient partial archive access in cloud scenarios. Integrated into Decypharr download client, delivering RAR support to over <span class="number">3,000</span> users.</p>
                     </div>
 
                     <div class="project">
@@ -126,31 +139,35 @@
                             <a href="https://github.com/eliasbenb/PlexAniBridge" class="ext-link"
                                 target="_blank">github.com</a>
                         </div>
-                        <p class="project-tech">Python, GraphQL, Docker</p>
-                        <p class="project-desc">Media sync service connecting Plex and AniList. <span
-                                class="number">20K+</span> Docker pulls, <span class="number">97%</span> accuracy
-                            content matching across 8 sources.</p>
+                        <p class="project-tech">Python, Svelte, Tailwind, GraphQL, asyncio</p>
+                        <p class="project-desc">Built a media synchronization service tracking watch-status between Plex and AniList, achieving <span class="number">30,000+</span> Docker pulls. Developed Python sync engine using asyncio and GraphQL, maintaining metadata mapping with <span class="number">~99.8%</span> accuracy across 8 sources. Designed progressive web app serving <span class="number">~500</span> users.</p>
                     </div>
 
                     <div class="project">
                         <div class="project-header">
-                            <h3 class="project-title">libDrive/Dester</h3>
-                            <a href="https://github.com/libDrive" class="ext-link" target="_blank">github.com</a>
+                            <h3 class="project-title">DineAI</h3>
+                            <a href="https://github.com/eliasbenb/DineAI" class="ext-link" target="_blank">github.com</a>
                         </div>
-                        <p class="project-tech">React, Flask/Go, MongoDB</p>
-                        <p class="project-desc">Open source media library indexer. Led development fostering community
-                            of <span class="number">300+</span> members, <span class="number">100K+</span> downloads.
-                        </p>
+                        <p class="project-tech">Java, JavaScript, Spring Boot, React, Tailwind</p>
+                        <p class="project-desc">Collaborated in Agile to prototype a SaaS platform for restaurants to host AI-powered menus. Implemented sentiment analysis pipelines using LLM APIs to summarize customer reviews. Configured CI/CD pipelines with Docker and GitHub Actions for automated testing and deployment.</p>
                     </div>
 
                     <div class="project">
                         <div class="project-header">
-                            <h3 class="project-title">CSAW CTF</h3>
+                            <h3 class="project-title">CSAW</h3>
                             <a href="https://csaw.io" class="ext-link" target="_blank">csaw.io</a>
                         </div>
                         <p class="project-tech">Python, SQL, Wireshark</p>
-                        <p class="project-desc">Organized cybersecurity event for <span class="number">3K+</span>
-                            participants. Designed SQL injection and packet sniffing challenges.</p>
+                        <p class="project-desc">Organized CSAW 2023, the largest annual student-run cybersecurity event with <span class="number">3,000+</span> participants and hundreds of teams. Designed CTF challenge involving SQL injections and packet sniffing, attempted by <span class="number">50+</span> teams and solved by six.</p>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h3 class="project-title">libDrive</h3>
+                            <a href="https://github.com/libDrive" class="ext-link" target="_blank">github.com</a>
+                        </div>
+                        <p class="project-tech">Python, Go, Flask, React, MongoDB</p>
+                        <p class="project-desc">Built libDrive, an open source media library indexer using React, Flask, and MongoDB with native cloud storage integration. Led development of successor Dester, combined garnering a community of <span class="number">300+</span> members and <span class="number">100K+</span> downloads.</p>
                     </div>
 
                     <div class="project">
@@ -158,9 +175,8 @@
                             <h3 class="project-title">Nahar Studios</h3>
                             <a href="https://nahar.dev" class="ext-link" target="_blank">nahar.dev</a>
                         </div>
-                        <p class="project-tech">Godot, Python, Flask</p>
-                        <p class="project-desc">Co-founded game studio. Participated in 6 game jams, published to Play
-                            Store, developing metroidvania game.</p>
+                        <p class="project-tech">Node.js, Godot, Express.js, MongoDB</p>
+                        <p class="project-desc">Co-founded hobbyist game studio comprised of diverse programmers, artists, and musicians. Participated in <span class="number">6</span> game jams, published to Google Play Store, currently developing metroidvania game. Designed and deployed all studio websites and game backends.</p>
                     </div>
 
                     <div class="project">
@@ -170,9 +186,7 @@
                                 target="_blank">github.com</a>
                         </div>
                         <p class="project-tech">Python, Qt</p>
-                        <p class="project-desc">Cross-platform torrent aggregator. <span class="number">1K+</span>
-                            downloads, <span class="number">60+</span> GitHub stars, cuts search times by <span
-                                class="number">80%+</span>.</p>
+                        <p class="project-desc">Built cross-platform GUI program to aggregate 5 torrent trackers, offering consolidated search interface. Attracted <span class="number">1,000+</span> downloads and <span class="number">60+</span> GitHub stars for UI and ability to cut user search times. Implemented powerful querying capabilities including regex search, filtering, and pagination.</p>
                     </div>
                 </div>
             </div>
@@ -184,25 +198,22 @@
                 <div class="skills">
                     <div class="skill-group">
                         <h4>Languages</h4>
-                        <p class="skill-list">Python, JavaScript/TypeScript, Go, Java, Rust, C, HTML/CSS, Bash,
-                            PowerShell</p>
+                        <p class="skill-list">Python, Java, Go, JavaScript, TypeScript, Rust, C, C++, HTML, CSS, SQL, Bash, PowerShell, R, SAS, YAML, JSON, Godot</p>
                     </div>
 
                     <div class="skill-group">
                         <h4>Frameworks</h4>
-                        <p class="skill-list">React, Next.js, Django, FastAPI, Flask, Express, Svelte, PyTorch, Qt</p>
+                        <p class="skill-list">FastAPI, Django, Flask, Spring Boot, React, Next.js, Svelte, Vue.js, Express.js, PyTorch, Pandas, NumPy, Qt, Tauri, Pytest, Jest, JUnit, Chart.js, Plotly, Tailwind</p>
                     </div>
 
                     <div class="skill-group">
-                        <h4>Infrastructure</h4>
-                        <p class="skill-list">AWS, Docker, PostgreSQL, MongoDB, GitHub Actions, Linux, SLURM, HIPAA
-                            compliance</p>
+                        <h4>Technologies</h4>
+                        <p class="skill-list">PostgreSQL, SQLite, Oracle SQL, MongoDB, GraphQL, REST APIs, OAuth 2.0, AWS, Docker, Kubernetes, Git, Linux, SLURM, Grafana, Prometheus, Elasticsearch, Nginx, Traefik, Jupyter, RStudio, Vite, Node.js, Prisma, SQLAlchemy, GitHub Actions</p>
                     </div>
 
                     <div class="skill-group">
-                        <h4>Domains</h4>
-                        <p class="skill-list">Full-stack development, Machine learning, DevOps, HPC, Database
-                            optimization, System architecture</p>
+                        <h4>Concepts</h4>
+                        <p class="skill-list">Software Engineering, Machine Learning, Generative AI, Full Stack Development, DevOps, CI/CD, Infrastructure as Code, Data Analytics, Statistical Analysis, System Architecture, Database Design, Performance Optimization, API Design, Technical Leadership, HIPAA Compliance, HPC, Distributed Systems, Predictive Modeling, ETL, Data Visualization, Time Series Analysis</p>
                     </div>
                 </div>
             </div>
